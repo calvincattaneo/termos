@@ -83,8 +83,8 @@ $('#emprestimo-save-btn').click(function(event) {
                 showMessage("Emprestimo foi atualizado.", "#update-alert");
             }
         },
-        error: function(xhr) {
-            var errors = xhr.responseJSON;
+        error: function(data) {
+            var errors = data.responseJSON;
             if ($.isEmptyObject(errors) == false) {
                 $.each(errors, function(key, value) {
                     $('#' + key)
